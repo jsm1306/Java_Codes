@@ -13,7 +13,7 @@ class OuterClass1 {
 
 public class Method_inner_class {
     public static void main(String[] args) {
-        OuterClass.StaticNestedClass nested = new OuterClass.StaticNestedClass();
-        nested.display();
+        OuterClass1 nested = new OuterClass1();
+        nested.method();
     }
 }
