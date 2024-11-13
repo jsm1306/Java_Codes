@@ -17,13 +17,13 @@ class MultiThreadingg extends Thread {
             }
         }
     }
+}
 
-    public class MultiThreading2 {
-        public static void main(String[] args) {
-            for (int i = 0; i <= 3; i++) {
-                MultiThreadingg myThing = new MultiThreadingg(i);
-                myThing.start();
-            }
+public class MultiThreading2 {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 5; i++) {
+            MultiThreadingg myThing = new MultiThreadingg(i);
+            myThing.start();
         }
     }
 }
