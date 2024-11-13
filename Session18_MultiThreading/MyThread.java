@@ -4,7 +4,7 @@ public class MyThread extends Thread {
         System.out.println(t1.getState()); // NEW
         t1.start();
         System.out.println(t1.getState()); // RUNNABLE
-        Thread.sleep(100);
+        Thread.sleep(1000);
         System.out.println(t1.getState()); // TIMED_WAITING
         t1.join();
         System.out.println(t1.getState()); // TERMINATED
