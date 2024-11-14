@@ -1,7 +1,8 @@
 class FinalVariableExample {
     final int speed = 120;
 
-    void dispaly() {
+    void display() {
+//        speed=90;
         System.out.println("Speed limit is: " + speed);
     }
 }
@@ -9,6 +10,6 @@ class FinalVariableExample {
 public class final_variable {
     public static void main(String[] args) {
         FinalVariableExample obj = new FinalVariableExample();
-        obj.dispaly();
+        obj.display();
     }
 }

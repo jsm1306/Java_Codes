@@ -1,12 +1,12 @@
-class FinalClass {
+final class FinalClass {
     void display() {
         System.out.println("Method in a finalclass");
     }
 }
 
-class childclass extends FinalClass {
-//
-}
+//class childclass extends FinalClass {
+////
+//}
 
 public class finalclassexample {
     public static void main(String[] args) {

@@ -11,6 +11,7 @@ public class finalblankvariable {
     }
 
     void display() {
+        
         System.out.println("The speed limit is:" + maxlimit);
     }
 }

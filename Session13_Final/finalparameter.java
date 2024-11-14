@@ -4,8 +4,8 @@ public class finalparameter {
         obj.display(5);
     }
 
-    void display(int num) {
-        num += 10;
+    void display(final int num) {
+//        num += 10;
         System.out.println("The value of number is:" + num);
     }
 }
