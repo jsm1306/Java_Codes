@@ -1,7 +1,7 @@
 class Counter {
     private int count = 0;
 
-    //public synchronized void increment(){ public void increment() { 1 usage
+    //public synchronized void increment(){ public void increment() {
     public void increment() {
         count++;
     }
@@ -19,8 +19,8 @@ class CounterThread extends Thread {
     }
 
     public void run() {
-        for (int i = 0; i < 1000; i++) {
 
+        for (int i = 0; i < 1000; i++) {
             counter.increment();
         }
     }
@@ -38,9 +38,8 @@ public class CounterExample {
             t1.join();
             t2.join();
         } catch (InterruptedException e) {
-
-            e.printStackTrace();
         }
         System.out.println("Final Counter Value: " + counter.getCount());
+
     }
 }
