@@ -3,10 +3,10 @@ public class MyThread2 extends Thread {
         super(name);
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        MyThread2 l = new MyThread2("Low Priority Thread");
-        MyThread2 m = new MyThread2("Medium Priority Thread");
-        MyThread2 n = new MyThread2("High Priority Thread");
+    public static void main(String args[]) {
+        MyThread2 l = new MyThread2("1st Thread");
+        MyThread2 m = new MyThread2("2nd Thread");
+        MyThread2 n = new MyThread2("3rd Thread");
         l.setPriority(Thread.MIN_PRIORITY);
         m.setPriority(Thread.NORM_PRIORITY);
         n.setPriority(Thread.MAX_PRIORITY);
@@ -14,21 +14,21 @@ public class MyThread2 extends Thread {
         m.start();
         n.start();
 
+
     }
 
-    @Override
     public void run() {
-        System.out.println("Thread is Running...");
+        System.out.println("Thread is starting");
         for (int i = 1; i <= 5; i++) {
-            for (int j = 0; j < 5; j++) {
+            for (int j = 0; j < 4; j++) {
                 try {
-                    System.out.println(Thread.currentThread().getName() + " - Priority: " + Thread.currentThread().getPriority() + ", Priority: " + j);
+                    System.out.println(Thread.currentThread().getName() + "'s Priority: " + Thread.currentThread().getPriority() + "for the iteration: " + j);
                     Thread.sleep(1000);
+                    System.out.println(Thread.currentThread().getState() + "for the iteration: " + j);
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    System.out.println("thread interupted");
                 }
             }
         }
     }
 }
-

@@ -1,38 +1,32 @@
-class A{
+class A {
     int i;
     private int j;
-    void setij(int x, int y){
-        i=x;
-        j=y;
+
+    void setij(int x, int y) {
+        i = x;
+        j = y;
+    }
+
+    int getj() {
+        return j;
     }
 }
-class B extends A{
+
+class B extends A {
     int total;
-    void sum(){
-        // total = i+j;
+//    int x = super.getj();
+
+    void sum() {
+        total = super.i + super.getj();
+        System.out.println(total);
     }
 }
+
 public class access {
     public static void main(String[] args) {
-        B obj=new B();
-        obj.setij(10,12);
+        B obj = new B();
+        obj.setij(10, 12);
         obj.sum();
-        System.out.println("Total is: "+obj.total);
+        System.out.println("Total is: " + obj.total);
     }
- }
-// class Animalx{
-//     String name="Animal";
-// }
-// class Dogx extends Animalx{
-//     String name ="Dog";
-//     void printName(){
-//         System.out.println(super.name);
-//         System.out.println(name);
-//     }
-// }
-// public class access {
-//     public static void main(String[] args) {
-//         Dogx obj=new Dogx();
-//         obj.printName();
-//     }
-// }
+}
